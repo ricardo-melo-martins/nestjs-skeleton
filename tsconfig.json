@@ -27,6 +27,12 @@
       "@apps/*": [
         "src/apps/*"
       ],
+      "@rmm/utility": [
+        "libs/utility/src"
+      ],
+      "@rmm/utility/*": [
+        "libs/utility/src/*"
+      ]
     }
   }
 }

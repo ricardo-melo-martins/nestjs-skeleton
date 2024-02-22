@@ -1,29 +1,7 @@
 import { Injectable, Optional } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
+import { Utility } from '@rmm/utility'
 import * as path from 'path'
-
-export enum EnvironmentEnum {
-  'LOCAL' = 'local',
-  'PRODUCTION' = 'production',
-  'DEVELOPMENT' = 'development',
-  'STAGING' = 'staging',
-  'TESTING' = 'testing'
-}
-
-export const getProcessEnvOrFail = (name: string, isOptional = false): string => {
-  const value = process.env[name]
-
-  if (!isOptional && !value) {
-    try {
-      throw new Error(`ERROR: Missing required environment variable '${name}'!`)
-    } catch (error) {
-      console.error((error as Error).stack)
-      process.exit(1)
-    }
-  }
-
-  return value || ''
-}
 
 @Injectable()
 export class KernelService {
@@ -43,9 +21,9 @@ export class KernelService {
   }
 
   get currentEnvironment(): string {
-    const env = getProcessEnvOrFail('NODE_ENV')?.trim()
+    const env = Utility.system.getProcessEnvOrFail('NODE_ENV')?.trim()
     // determine if environment exists
-    if (!EnvironmentEnum[env.toUpperCase()]) {
+    if (!Utility.enum.EnvironmentEnum[env.toUpperCase()]) {
       throw new Error(`ERROR: Missing required environment variable '${env}'!`)
     }
 

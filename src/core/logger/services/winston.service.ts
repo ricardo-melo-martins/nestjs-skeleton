@@ -13,23 +13,30 @@ export function LoggerService(): LoggerService {
 export class WinstonLoggerService implements LoggerService {
   constructor(private readonly logger: winston.Logger) {}
 
+  get isActive() {
+    return process.env['NODE_ENV'] === 'development'
+  }
+
   public verbose?(message: any, context?: string): any {
-    return this.logger.verbose(...this.mapMessage(message, context))
+    if (this.isActive) return this.logger.verbose(...this.mapMessage(message, context))
   }
 
   public debug?(message: any, context?: string): any {
-    return this.logger.debug(...this.mapMessage(message, context))
+    if (this.isActive) return this.logger.debug(...this.mapMessage(message, context))
   }
 
   public log(message: any, context?: string): any {
-    return this.logger.info(...this.mapMessage(message, context))
+    if (this.isActive) return this.logger.info(...this.mapMessage(message, context))
   }
 
   public warn(message: any, context?: string): any {
-    return this.logger.warn(...this.mapMessage(message, context))
+    if (this.isActive) return this.logger.warn(...this.mapMessage(message, context))
   }
 
   public error(message: any, trace?: string, context?: string): any {
+    if (!this.isActive) {
+      return
+    }
     if (message instanceof Error) {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { message: msg, name, stack, ...meta } = message
