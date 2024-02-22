@@ -1,6 +1,7 @@
 .tmp
 #app configs
 config/*
+!config/.env.example
 !src/config/.env.example
 !src/config/*.config.ts
 .env
