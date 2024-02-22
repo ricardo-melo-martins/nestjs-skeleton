@@ -9,5 +9,9 @@
   "testRegex": ".e2e-spec.ts$",
   "transform": {
     "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@rmm/utility/(.*)": "<rootDir>/../libs/utility/src/$1",
+    "@rmm/utility": "<rootDir>/../libs/utility/src"
   }
 }
