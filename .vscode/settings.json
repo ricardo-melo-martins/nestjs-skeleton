@@ -1,0 +1,94 @@
+{
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.format.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "ts",
+    "typescript"
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnSave": true,
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true,
+  },
+  "[jsonl]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true,
+  },
+  "[php]": {
+    "editor.formatOnSave": true
+  },
+  "editor.semanticHighlighting.enabled": true,
+  "workbench.colorTheme": "Default Dark Modern",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.defaultProfile.linux": "Git Bash",
+  "window.zoomLevel": -1,
+  "workbench.colorCustomizations": {
+    "[Default Dark Modern]": {
+      "editor.background": "#000"
+    }
+  },
+  "editor.fontFamily": "Consolas, 'Courier New', monospace",
+  "editor.tokenColorCustomizations": {
+    "[Default Dark Modern]": {
+      "comments": "#343434",
+      "textMateRules": [
+        {
+          "scope": [
+            "keyword.other.phpdoc.php",
+            "meta.other.type.phpdoc.php",
+            "comment storage.type",
+            "comment variable",
+            "comment support.variable",
+            "comment support.class",
+            "comment support.type",
+            "comment entity.name.type",
+            "comment entity.name.class",
+            "comment keyword.operator",
+            "comment keyword",
+          ],
+          "settings": {
+            "foreground": "#343434"
+          }
+        },
+        {
+          "scope": [
+            "punctuation.definition.comment",
+            "punctuation.definition.comment.begin.documentation",
+            "punctuation.definition.comment.end.documentation"
+          ],
+          "settings": {
+            "foreground": "#414040",
+            "fontStyle": "bold"
+          }
+        },
+        {
+          "scope": "constant.other.class.php",
+          "settings": {
+            "foreground": "#569CD6",
+            "fontStyle": ""
+          }
+        }
+      ]
+    }
+  }
+}

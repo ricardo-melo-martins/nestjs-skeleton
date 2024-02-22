@@ -1,8 +1,8 @@
 {
-  "name": "nest-app",
+  "name": "nestjs-skeleton",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Standard and basic structure to assist in the quick start of tests, projects, pocs with this technology.",
+  "author": "RMM",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
