@@ -1,5 +1,14 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint"
-  ]
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "EditorConfig.EditorConfig",
+    "redhat.vscode-yaml",
+    "mikestead.dotenv",
+    "Orta.vscode-jest",
+    "christian-kohler.npm-intellisense",
+    "humao.rest-client",
+    "eamodio.gitlens",
+    "wix.vscode-import-cost"
+  ],
 }

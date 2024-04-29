@@ -29,36 +29,91 @@ Structure was based on <br>
 </table>
 
 
+## Requirements
+
+- Node > 18.x
+- Database (Mysql, Postgres)
+- Docker > 18.06 (Optional)
+    - For testing I using https://github.com/ricardo-melo-martins/docker
+
+
 ## Installation
 
+Cloning
+
 ```bash
-$ npm install
+git clone https://github.com/ricardo-melo-martins/nestjs-skeleton.git
 ```
+
+... entering on nestjs-skeleton dir
+
+
+```bash
+
+cd nestjs-skeleton
+
+composer install
+
+
+# make it yours (optional)
+rm -rf .git
+
+```
+
+## Configure
+
+Copy example environment
+
+```bash
+
+cp ./config/.env.example .env
+
+```
+
+then change the configuration according to the database you want to use.
+
+### Database
+
+```bash
+
+DATABASE_DEFAULT_TYPE=mysql
+DATABASE_DEFAULT_HOST=127.0.0.1
+DATABASE_DEFAULT_PORT=3306
+DATABASE_DEFAULT_DATABASE=my_database
+DATABASE_DEFAULT_USERNAME=root
+DATABASE_DEFAULT_PASSWORD=YourP@ssw0rd!
+
+```
+
 
 ## Running the app
 
 ```bash
+
 # development
-$ npm run start
+npm run start
 
 # watch mode
-$ npm run start:dev
+npm run start:dev
 
 # production mode
-$ npm run start:prod
+npm run start:prod
+
 ```
 
 ## Test
 
 ```bash
+
 # unit tests
-$ npm run test
+npm run test
 
 # e2e tests
-$ npm run test:e2e
+npm run test:e2e
 
 # test coverage
-$ npm run test:cov
+npm run test:cov
+
 ```
 
 
