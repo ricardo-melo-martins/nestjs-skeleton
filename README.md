@@ -28,6 +28,11 @@ Structure was based on <br>
   </tr>
 </table>
 
+## Features
+
+- Modular Structure
+- Defines for Style and Linting (ESLint, Prettier, EditorConfig)
+
 
 ## Requirements
 

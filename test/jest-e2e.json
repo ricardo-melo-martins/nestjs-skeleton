@@ -12,6 +12,12 @@
   },
   "moduleNameMapper": {
     "@rmm/utility/(.*)": "<rootDir>/../libs/utility/src/$1",
-    "@rmm/utility": "<rootDir>/../libs/utility/src"
+    "@rmm/utility": "<rootDir>/../libs/utility/src",
+    "^@apps(|/.*)$": "<rootDir>/../src/apps/$1",
+    "@apps": "<rootDir>/../src/apps",
+    "^@core(|/.*)$": "<rootDir>/../src/core/$1",
+    "@core": "<rootDir>/../src/core",
+    "@config/(.*)": "<rootDir>/../config/$1",
+    "@config": "<rootDir>/../config"
   }
 }

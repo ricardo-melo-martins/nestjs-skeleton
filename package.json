@@ -80,7 +80,12 @@
       "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
-      "^@rmm/utility(|/.*)$": "<rootDir>/libs/utility/src/$1"
+      "^@rmm/utility(|/.*)$": "<rootDir>/libs/utility/src/$1",
+      "@rmm/utility": "<rootDir>/libs/utility/src",
+      "^@apps(|/.*)$": "<rootDir>/src/apps/$1",
+      "@apps": "<rootDir>/src/apps",
+      "^@core(|/.*)$": "<rootDir>/src/core/$1",
+      "@core": "<rootDir>/src/core"
     }
   }
 }

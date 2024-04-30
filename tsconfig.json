@@ -32,7 +32,7 @@
       ],
       "@rmm/utility/*": [
         "libs/utility/src/*"
-      ]
+      ],
     }
   }
 }
